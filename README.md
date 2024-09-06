@@ -38,6 +38,7 @@ Define the projects directory
 PROJECTS_DIR="projects"
 
 #Step 1: Create the directory structure
+
 mkdir -p $PROJECTS_DIR/facebook
 mkdir -p $PROJECTS_DIR/google/oriserve
 mkdir -p $PROJECTS_DIR/meta/oriserve
