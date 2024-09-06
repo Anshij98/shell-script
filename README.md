@@ -32,12 +32,12 @@ For each oriserve directory found, the script creates a test.txt file containing
 
 SCRIPT-
 
-!/bin/bash
+#!/bin/bash
 
 Define the projects directory
 PROJECTS_DIR="projects"
 
-Step 1: Create the directory structure
+#Step 1: Create the directory structure
 mkdir -p $PROJECTS_DIR/facebook
 mkdir -p $PROJECTS_DIR/google/oriserve
 mkdir -p $PROJECTS_DIR/meta/oriserve
@@ -45,7 +45,7 @@ mkdir -p $PROJECTS_DIR/oracle
 
 echo "Directory structure created."
 
-Step 2: Find 'oriserve' directories and create a test.txt file in them
+#Step 2: Find 'oriserve' directories and create a test.txt file in them
 find $PROJECTS_DIR -type d -name "oriserve" | while read oriserve_dir; do
     echo "This is the test file inside the oriserve directory" > "$oriserve_dir/test.txt"
     echo "Created test.txt in $oriserve_dir"
@@ -53,7 +53,8 @@ done
 
 echo "Process completed. All 'oriserve' directories now contain a test.txt file."
 
-Execute the script to create the directory structure and test.txt files:
+Execute the script to create the directory structure and test.txt files-
+
 ./create_oriserve_dirs.sh
 
 
